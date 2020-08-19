@@ -1,0 +1,29 @@
+pipeline {
+  agent any
+  stages {
+    stage('ping') {
+      parallel {
+        stage('ping') {
+          steps {
+            bat(script: 'yum clean all ', returnStatus: true)
+          }
+        }
+
+        stage('ping 2') {
+          steps {
+            bat(script: 'yum update -y openssh-server.x86_64  ', returnStatus: true)
+          }
+        }
+
+        
+      }
+    }
+
+    stage('teste2') {
+      steps {
+        echo 'echo teste 2 ok'
+      }
+    }
+
+  }
+}
