@@ -1,0 +1,9 @@
+---
+- name: Default Playbook - Starting Deploy
+  hosts: all 
+  roles:
+          #- common
+          #- mariadb
+          - php 
+          #   - create_user 
+...
