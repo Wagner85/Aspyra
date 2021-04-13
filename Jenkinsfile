@@ -11,7 +11,7 @@ pipeline {
 
         stage('ping 2') {
           steps {
-            sh(script: 'ping google.com.br -c4  ', returnStatus: true)
+            sh(script: 'ping google.com.br -c3  ', returnStatus: true)
           }
         }
 
