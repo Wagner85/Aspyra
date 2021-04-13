@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('ping') {
           steps {
-            sh(script: 'ping 8.8.8.8 -c4 ', returnStatus: true)
+            sh(script: 'ping 8.8.8.8 -c3 ', returnStatus: true)
           }
         }
 
