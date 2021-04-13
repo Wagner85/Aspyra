@@ -5,13 +5,13 @@ pipeline {
       parallel {
         stage('ping') {
           steps {
-            sh(script: 'ping 8.8.8.8 -c3 ', returnStatus: true)
+            sh(script: 'ping 8.8.8.8 -c4 ', returnStatus: true)
           }
         }
 
         stage('ping 2') {
           steps {
-            sh(script: 'ping google.com.br -c3  ', returnStatus: true)
+            sh(script: 'ping google.com.br -c4  ', returnStatus: true)
           }
         }
 
